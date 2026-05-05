@@ -1,0 +1,83 @@
+.today-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.daily-focus {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.event-time {
+  font-size: 0.8rem;
+  color: var(--accent-blue);
+  font-family: 'Orbitron', sans-serif;
+  width: 65px;
+}
+
+.event-detail {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 2px solid var(--accent-blue);
+}
+
+.event-name {
+  font-size: 0.9rem;
+}
+
+.event-duration {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.progress-container {
+  margin-top: 4px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+  transition: width 1s ease-out;
+}
