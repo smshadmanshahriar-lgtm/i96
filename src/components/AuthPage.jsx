@@ -39,16 +39,7 @@ export default function AuthPage() {
     }
   };
 
-  const handleGoogleLogin = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'google',
-      });
-      if (error) throw error;
-    } catch (error) {
-      setError(error.message);
-    }
-  };
+
 
   return (
     <div className="auth-container">
@@ -90,14 +81,7 @@ export default function AuthPage() {
           </button>
         </form>
 
-        <div className="auth-divider">
-          <span>OR</span>
-        </div>
 
-        <button className="google-auth-btn" onClick={handleGoogleLogin}>
-          <Globe size={18} />
-          Continue with Google
-        </button>
 
         <div className="auth-toggle">
           <button onClick={() => setIsLogin(!isLogin)}>

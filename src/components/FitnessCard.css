@@ -51,3 +51,289 @@
   text-transform: uppercase;
   margin-top: 2px;
 }
+
+/* Connect Health Action Button */
+.connect-health-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  color: #00E5FF;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.connect-health-btn:hover {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+/* Pulse Animation for Heart Icon */
+@keyframes heart-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.pulse-heart {
+  color: #FF2E93;
+  animation: heart-pulse 1.2s infinite ease-in-out;
+}
+
+/* Modal Navigation Tabs */
+.modal-navigation {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #fff;
+}
+
+.tab-btn.active {
+  color: #00E5FF;
+  border-bottom-color: #00E5FF;
+}
+
+/* Supported Health Apps Grid */
+.health-apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.brand-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0.3;
+}
+
+.brand-card.apple-health::after { background: #FF2E93; }
+.brand-card.google-fit::after { background: #34A853; }
+.brand-card.fitbit::after { background: #00B0B9; }
+.brand-card.garmin::after { background: #007A87; }
+.brand-card.strava::after { background: #FC6100; }
+
+.brand-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.brand-card.connected {
+  background: rgba(0, 229, 255, 0.03);
+  border-color: rgba(0, 229, 255, 0.25);
+}
+
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-logo {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.brand-logo.red { color: #EA4335; }
+.brand-logo.cyan { color: #00B0B9; }
+.brand-logo.blue { color: #007A87; }
+.brand-logo.orange { color: #FC6100; }
+
+.brand-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.connect-brand-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.connect-brand-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.connect-brand-btn.disconnect {
+  background: rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.3);
+  color: #00E5FF;
+}
+
+.connect-brand-btn.disconnect:hover {
+  background: rgba(255, 46, 147, 0.1);
+  border-color: rgba(255, 46, 147, 0.3);
+  color: #FF2E93;
+}
+
+/* Custom Reset Button & Layout */
+.modal-footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.reset-health-btn {
+  background: rgba(255, 46, 147, 0.04) !important;
+  border: 1px solid rgba(255, 46, 147, 0.15) !important;
+  color: #FF2E93 !important;
+  font-size: 0.75rem !important;
+  padding: 6px 12px !important;
+  transition: all 0.2s ease;
+}
+
+.reset-health-btn:hover {
+  background: rgba(255, 46, 147, 0.12) !important;
+  border-color: rgba(255, 46, 147, 0.3) !important;
+}
+
+.api-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-tip {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Upgraded Scrollable Connect Telemetry Window Styles */
+.i96-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(5, 7, 12, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex !important;
+  align-items: flex-start !important; /* Position at top so it is scrollable down */
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px 16px !important;
+  overflow-y: auto !important; /* Let overlay scroll if modal is too tall */
+}
+
+/* Ensure the overlay scrollbar is visible */
+.i96-modal-overlay::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.i96-modal-overlay::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.i96-modal-overlay::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.25) !important;
+  border-radius: 3px !important;
+}
+
+.health-modal {
+  max-height: 90vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.health-modal .modal-body {
+  overflow-y: auto !important;
+  max-height: 380px !important;
+  min-height: 0 !important;
+  padding-right: 8px !important;
+}
+
+/* Premium scrollbar for the modal body */
+.health-modal .modal-body::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.health-modal .modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 3px !important;
+}
+
+.health-modal .modal-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.25) !important;
+  border-radius: 3px !important;
+}
+
+.health-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.45) !important;
+}
